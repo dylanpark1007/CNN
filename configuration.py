@@ -23,7 +23,5 @@ config = {
 
 }
 
-# sentence_len     MR = 54 , Subj = 115, Trec = 35, MPQA = 35 , SST-1 = 54 , SST-2 = 54 , CR = 100 (나머지 데이터셋 하나씩 최대문장길이 실험해보기)
+# sentence_len     MR = 54 , Subj = 115, Trec = 35, MPQA = 35 , SST-1 = 54 , SST-2 = 54 , CR = 100 
 # model option     rand, static, non-static, multichannel
-
-# 1. sst1은 std_dev가 0.05일때 잘 나옴
