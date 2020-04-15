@@ -221,8 +221,8 @@ class CNN(object):
             losses = tf.nn.sparse_softmax_cross_entropy_with_logits(logits=self.y, labels=self.labels)
 
             # self.loss = tf.reduce_mean(losses) + 0.01*tf.nn.l2_loss(C1) + 0.01*tf.nn.l2_loss(C2) + 0.01*tf.nn.l2_loss(C3) # version2
-
-            l2_reg_lambda = 0.1 # version1 41%
+            # L2 norm
+            l2_reg_lambda = 0.1 
             self.loss = tf.reduce_mean(losses) + l2_reg_lambda * self.l2_loss
 
             # self.loss = tf.reduce_mean(losses) # original version
@@ -289,7 +289,7 @@ class CNN(object):
         print("Accuracy", np.mean(np.asarray(np.equal(ys, preds), dtype='float32')) * 100)
 
 
-# 1. 224줄에 L2 norm 구현
+
 
 
 import math
